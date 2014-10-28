@@ -62,6 +62,7 @@ void JSLog(NSString *format, ...)
     NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
     va_end(args);
     
+    NSLog( @"%@", str );
     JS_Log *log = [JS_Log getInstance];
     [log addLog:str];
 }
